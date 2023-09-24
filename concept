@@ -1,0 +1,15 @@
+import pytz
+
+list(filter(lambda x: 'Brazil' in x, pytz.all_timezones))
+['Brazil/Acre', 'Brazil/DeNoronha', 'Brazil/East', 'Brazil/West']
+
+timezone = pytz.timezone('Africa/Asmera')
+
+Configurando timezone
+O Python sempre irá trabalhar com timezone que está configurado no sistema operacional que está sendo utilizado. Porém, conseguimos configurar o timezone para outras regiões.
+[Clique aqui para saber mais sobre o UTC (Tempo Universal Coordenado)](https://pt.wikipedia.org/wiki/Tempo_Universal_Coordenado)
+[Clique aqui para ver a lista de todas timezone (tz database)](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
+
+datetime.datetime.now().astimezone(timezone)
+datetime.datetime(2022, 5, 2, 4, 11, 29, 456851, tzinfo=<DstTzInfo 'Africa/Asmera' EAT+3:00:00 STD>)
+
